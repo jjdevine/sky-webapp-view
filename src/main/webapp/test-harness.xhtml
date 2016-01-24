@@ -1,0 +1,27 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+	<h:form id="test-harness-form">
+			
+		&lt; 1 = invalid location <br/>
+		1-100 = location id London <br/>
+		101-200 = location id Liverpool <br/>
+		&gt; 200 = other location
+		<br /><br />
+		
+		<h:outputLabel for="cookie-input">Cookie Value:</h:outputLabel>
+		<p:inputText id="cookie-input"
+			value="#{testHarnessViewBean.cookieValue}" layout="pageDirection" />
+
+		<br/>
+		<p:commandButton action="#{testHarnessViewBean.setCookie}"
+			value="Save Cookie" />
+		<br/>
+		<p:commandButton action="product-selection"
+			value="Go to product selection" />
+	</h:form>
+
+</ui:composition>

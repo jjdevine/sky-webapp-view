@@ -1,0 +1,44 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui" 
+	xmlns:f="http://java.sun.com/jsf/core"
+	template="sky-template.xhtml">
+
+	<ui:define name="bodyContent">
+		<h:form id="product-form">
+			<p:panel styleClass="product-panel">
+				<p:panelGrid columns="3" styleClass="product-grid" layout="grid">
+					
+					<h:outputText value="Sports"/>
+					<h:outputText value="News"/>
+					<h:outputText value=""/>
+					
+					<p:selectManyCheckbox id="sports-checkbox"
+						value="#{productSelectionViewBean.selectedSportsList}" layout="pageDirection" >
+						<p:ajax event="change" update="all-products-list" />
+						<f:selectItems value="#{productSelectionViewBean.availableSportsList}" var="sportsProduct"
+							itemLabel="#{sportsProduct.name}" itemValue="#{sportsProduct.id}"  />
+					</p:selectManyCheckbox>
+					<p:selectManyCheckbox id="news-checkbox"
+						value="#{productSelectionViewBean.selectedNewsList}" layout="pageDirection">
+						<p:ajax event="change" update="all-products-list" />
+						<f:selectItems value="#{productSelectionViewBean.availableNewsList}" var="newsProduct"
+							itemLabel="#{newsProduct.name}" itemValue="#{newsProduct.id}" />
+					</p:selectManyCheckbox>
+					<p:panel>
+					    <p:dataList emptyMessage="Basket Empty" id="all-products-list" value="#{productSelectionViewBean.allProducts}" 
+					    		var="item" type="ordered">
+							<f:facet name="header">
+					            Basket
+					        </f:facet>
+					        #{item}
+					    </p:dataList>
+					    <p:commandButton action="#{productSelectionViewBean.checkout}" value="Checkout"/>
+				    </p:panel>
+				</p:panelGrid>
+			</p:panel>	
+		</h:form>
+	</ui:define>
+
+</ui:composition>

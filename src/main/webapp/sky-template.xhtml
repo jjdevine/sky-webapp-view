@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<link href="./css/styles.css" rel="stylesheet" type="text/css" />
+</h:head>
+<h:body>
+	<ui:insert name="header">
+	    <p:panel id="header-panel" styleClass="sky-header-panel">
+        	<h2>Product Selection</h2>
+    	</p:panel>
+	</ui:insert>
+	<ui:insert name="bodyContent"></ui:insert>
+	<ui:insert name="footer">
+	    <p:panel id="footer-panel" styleClass="sky-footer-panel">
+        	<span>© sky</span>
+    	</p:panel>
+	</ui:insert>
+</h:body>
+</html>

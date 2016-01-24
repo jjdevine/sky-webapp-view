@@ -1,0 +1,11 @@
+.sky-header-panel h2, .sky-footer-panel {
+	text-align: center;
+}
+
+.product-grid {
+	width: 100%;
+}
+
+.product-panel {
+	height:300px;
+}

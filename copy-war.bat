@@ -1,0 +1,1 @@
+copy /y C:\workspaces\sky-challenge\sky-webapp-view\target\sky-webapp.war C:\application-servers\jboss-eap-6.4\standalone\deployments

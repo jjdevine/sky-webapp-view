@@ -1,0 +1,21 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core" template="sky-template.xhtml">
+
+	<ui:define name="bodyContent">
+		<h:form id="product-form">
+			<p:panel>
+				<p:dataList emptyMessage="Basket Empty" id="all-products-list"
+					value="#{productBasketBean.allProducts}" var="item" type="ordered">
+					<f:facet name="header">
+			            Your Selected Products
+			        </f:facet>
+			        #{item}
+			    </p:dataList>
+			</p:panel>
+		</h:form>
+	</ui:define>
+
+</ui:composition>
