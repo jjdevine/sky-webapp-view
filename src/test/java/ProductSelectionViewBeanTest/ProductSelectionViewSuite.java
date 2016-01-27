@@ -5,7 +5,8 @@ import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-	ProductBasketBeanTest.class
+	ProductBasketBeanTest.class,
+	ProductSelectionViewBeanTest.class
 })
 
 public class ProductSelectionViewSuite {

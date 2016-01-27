@@ -15,13 +15,13 @@
 					<h:outputText value=""/>
 					
 					<p:selectManyCheckbox id="sports-checkbox"
-						value="#{productSelectionViewBean.selectedSportsList}" layout="pageDirection" >
+						value="#{productSelectionViewBean.selectedSportsIdList}" layout="pageDirection" >
 						<p:ajax event="change" update="all-products-list" />
 						<f:selectItems value="#{productSelectionViewBean.availableSportsList}" var="sportsProduct"
 							itemLabel="#{sportsProduct.name}" itemValue="#{sportsProduct.id}"  />
 					</p:selectManyCheckbox>
 					<p:selectManyCheckbox id="news-checkbox"
-						value="#{productSelectionViewBean.selectedNewsList}" layout="pageDirection">
+						value="#{productSelectionViewBean.selectedNewsIdList}" layout="pageDirection">
 						<p:ajax event="change" update="all-products-list" />
 						<f:selectItems value="#{productSelectionViewBean.availableNewsList}" var="newsProduct"
 							itemLabel="#{newsProduct.name}" itemValue="#{newsProduct.id}" />
